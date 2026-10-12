@@ -1,491 +1,472 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moore Prisma | Auditoria e Consultoria Contábil</title>
-    
-    <!-- Bootstrap CSS 5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moore Prisma | Auditoria e Consultoria Contábil - Ribeirão Preto</title>
+  <meta name="description" content="Moore Prisma Auditoria e Consultoria Contábil: contabilidade, auditoria, consultoria tributária e treinamentos em Ribeirão Preto - SP desde 2006.">
 
-    <style>
-        :root {
-            --primary-color: #0b2545; /* Azul Marinho Corporativo */
-            --secondary-color: #134074;
-            --accent-color: #c59b27; /* Dourado / Elegância */
-            --light-bg: #f8f9fa;
-            --dark-text: #2b2d42;
-        }
+  <!-- Bootstrap 5 -->
+  <link href="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css)" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap)" rel="stylesheet">
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--dark-text);
-        }
+  <style>
+    :root {
+      --primaria: #0b2e4f;
+      --secundaria: #1565c0;
+      --destaque: #00b894;
+      --dourado: #f4b400;
+      --claro: #f4f7fb;
+    }
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
+    body { font-family: 'Open Sans', sans-serif; color: #333; scroll-behavior: smooth; }
+    h1, h2, h3, h4, h5, .navbar-brand { font-family: 'Montserrat', sans-serif; }
 
-        /* Navbar */
-        .navbar {
-            background-color: var(--primary-color);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-        }
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: #fff !important;
-        }
-        .navbar-brand span {
-            color: var(--accent-color);
-        }
-        .nav-link {
-            color: #e0e0e0 !important;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: var(--accent-color) !important;
-        }
+    /* Navbar */
+    .navbar { background: rgba(11, 46, 79, .97); transition: .3s; }
+    .navbar-brand span { color: var(--destaque); }
+    .nav-link { color: #fff !important; font-weight: 600; margin: 0 6px; }
+    .nav-link:hover { color: var(--destaque) !important; }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(19, 64, 116, 0.85)), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-            color: #fff;
-            padding: 120px 0 80px 0;
-        }
-        .hero-title {
-            font-weight: 700;
-            font-size: 2.8rem;
-        }
-        .btn-custom {
-            background-color: var(--accent-color);
-            color: #fff;
-            font-weight: 600;
-            padding: 12px 30px;
-            border-radius: 5px;
-            border: none;
-            transition: all 0.3s;
-        }
-        .btn-custom:hover {
-            background-color: #a37f1e;
-            color: #fff;
-            transform: translateY(-2px);
-        }
+    /* Topo */
+    .topbar { background: var(--primaria); color: #cfd8e3; font-size: .85rem; }
+    .topbar a { color: #cfd8e3; text-decoration: none; }
 
-        /* Card Services */
-        .card-service {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-        }
-        .card-service:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-        }
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-        }
+    /* Hero */
+    .hero {
+      min-height: 92vh;
+      background: linear-gradient(135deg, rgba(11,46,79,.92), rgba(21,101,192,.85)),
+                  url('[images.unsplash.com](https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600)') center/cover no-repeat;
+      color: #fff; display: flex; align-items: center;
+    }
+    .hero h1 { font-weight: 800; font-size: 3rem; }
+    .hero h1 span { color: var(--destaque); }
+    .btn-destaque { background: var(--destaque); color: #fff; font-weight: 600; border-radius: 50px; padding: 12px 30px; }
+    .btn-destaque:hover { background: #019874; color: #fff; }
+    .btn-outline-light { border-radius: 50px; padding: 12px 30px; font-weight: 600; }
 
-        /* Corporate Stats / Info */
-        .badge-info-custom {
-            background-color: #eef2f7;
-            border-left: 4px solid var(--accent-color);
-            padding: 15px 20px;
-            margin-bottom: 10px;
-        }
+    /* Seções */
+    section { padding: 90px 0; }
+    .titulo-secao { font-weight: 800; color: var(--primaria); }
+    .titulo-secao::after {
+      content: ''; display: block; width: 70px; height: 4px;
+      background: var(--destaque); margin: 12px auto 0; border-radius: 2px;
+    }
+    .subtitulo { color: var(--secundaria); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: .85rem; }
+    .bg-claro { background: var(--claro); }
 
-        /* Section Titles */
-        .section-title {
-            color: var(--primary-color);
-            font-weight: 700;
-            margin-bottom: 15px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent-color);
-            display: block;
-            margin: 10px auto 0 auto;
-        }
+    /* Cards */
+    .card-servico {
+      border: none; border-radius: 16px; padding: 35px 25px; height: 100%;
+      box-shadow: 0 8px 25px rgba(0,0,0,.06); transition: .3s;
+    }
+    .card-servico:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(21,101,192,.18); }
+    .icone {
+      width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--secundaria), var(--destaque)); color: #fff; font-size: 1.8rem; margin-bottom: 20px;
+    }
 
-        /* Contact Section */
-        .contact-box {
-            background-color: var(--primary-color);
-            color: #fff;
-            border-radius: 10px;
-            padding: 30px;
-        }
-        .contact-icon {
-            font-size: 1.5rem;
-            color: var(--accent-color);
-            margin-right: 15px;
-        }
+    /* Números */
+    .numeros { background: linear-gradient(135deg, var(--primaria), var(--secundaria)); color: #fff; padding: 70px 0; }
+    .numeros h3 { font-size: 2.8rem; font-weight: 800; color: var(--dourado); }
 
-        /* Footer */
-        footer {
-            background-color: #07172c;
-            color: #a0a0a0;
-            padding: 20px 0;
-            font-size: 0.9rem;
-        }
-    </style>
+    /* Sócios */
+    .socio { background: #fff; border-radius: 12px; padding: 18px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,.05); height: 100%; transition: .3s; }
+    .socio:hover { transform: scale(1.03); }
+    .socio i { font-size: 2.5rem; color: var(--secundaria); }
+    .socio h6 { font-weight: 700; margin: 10px 0 4px; color: var(--primaria); font-size: .95rem; }
+    .badge-adm { background: var(--destaque); }
+
+    /* Frase */
+    .frase { background: var(--dourado); color: var(--primaria); padding: 60px 0; }
+    .frase blockquote { font-size: 1.6rem; font-family: 'Montserrat'; font-weight: 700; }
+
+    /* Tabela de informações */
+    .tabela-info td:first-child { font-weight: 700; color: var(--primaria); width: 45%; }
+
+    /* Contato */
+    .contato-box { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 8px 25px rgba(0,0,0,.06); height: 100%; }
+    .contato-item { display: flex; gap: 15px; margin-bottom: 22px; }
+    .contato-item i { font-size: 1.5rem; color: var(--destaque); }
+    .contato-item a { color: #333; text-decoration: none; }
+    .contato-item a:hover { color: var(--secundaria); }
+
+    /* Rodapé */
+    footer { background: #071d33; color: #aab7c4; padding: 60px 0 20px; }
+    footer h5 { color: #fff; margin-bottom: 20px; }
+    footer a { color: #aab7c4; text-decoration: none; }
+    footer a:hover { color: var(--destaque); }
+    .redes a { display: inline-flex; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.1); align-items: center; justify-content: center; margin-right: 8px; }
+
+    /* WhatsApp flutuante */
+    .whatsapp {
+      position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; border-radius: 50%;
+      background: #25d366; color: #fff; font-size: 2rem; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,.25); z-index: 999; animation: pulse 2s infinite;
+    }
+    .whatsapp:hover { color: #fff; }
+    @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)} 70%{box-shadow:0 0 0 15px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+
+    @media (max-width: 768px) { .hero h1 { font-size: 2.1rem; } section { padding: 60px 0; } }
+  </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">MOORE <span>PRISMA</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-ul navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">A Empresa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicos">Atividades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#socios">Corpo Diretivo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
-            </div>
+  <!-- Barra superior -->
+  <div class="topbar py-2 d-none d-md-block">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <i class="bi bi-geo-alt-fill me-1"></i> Rua Milton José Robusti, 75 - Conj. 1509 - Ribeirão Preto/SP
+      </div>
+      <div>
+        <a href="tel:1630197900" class="me-3"><i class="bi bi-telephone-fill me-1"></i>(16) 3019-7900</a>
+        <a href="mailto:thatiane@tmaenergiasolar.com"><i class="bi bi-envelope-fill me-1"></i>thatiane@tmaenergiasolar.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#inicio"><i class="bi bi-bar-chart-line-fill me-2"></i>Moore <span>Prisma</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipe">Sócios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#empresa">Dados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="inicio">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <p class="subtitulo text-white-50">Organizações Contábeis desde 2006</p>
+          <h1>Contabilidade estratégica para <span>empresas que crescem</span></h1>
+          <p class="lead my-4">Auditoria, consultoria contábil e tributária e treinamentos com a solidez de 20 anos de experiência em Ribeirão Preto e região.</p>
+          <a href="#contato" class="btn btn-destaque me-2 mb-2"><i class="bi bi-chat-dots me-2"></i>Fale Conosco</a>
+          <a href="#servicos" class="btn btn-outline-light mb-2"><i class="bi bi-grid me-2"></i>Nossos Serviços</a>
         </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section id="home" class="hero text-center text-lg-start">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 fw-semibold">Desde 2006 • Há 20 Anos no Mercado</span>
-                    <h1 class="hero-title mb-4">Soluções Estratégicas em Auditoria e Consultoria Contábil</h1>
-                    <p class="lead mb-4">A excelência técnica e a precisão técnica que a sua empresa precisa para crescer de forma segura, sustentável e em conformidade técnica.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#contato" class="btn btn-custom"><i class="bi bi-telephone-fill me-2"></i>Fale Conosco</a>
-                        <a href="#servicos" class="btn btn-outline-light px-4 py-2 fw-semibold">Nossas Atividades</a>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-5 d-none d-lg-block text-center">
+          <i class="bi bi-graph-up-arrow" style="font-size: 14rem; color: rgba(255,255,255,.15);"></i>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <!-- SOBRE A EMPRESA -->
-    <section id="sobre" class="py-5">
-        <div class="container py-4">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="section-title text-start ms-0">Sobre a Moore Prisma</h2>
-                    <p class="text-muted mt-4">Fundada em <strong>30 de janeiro de 2006</strong> em Ribeirão Preto/SP, a <strong>Moore Prisma Auditoria e Consultoria Contábil S/S LTDA</strong> atua com foco em transparência, rigor técnico e inteligência corporativa.</p>
-                    <p class="text-muted">Com ampla bagagem de mercado, nossa estrutura oferece assessoria completa nas áreas de auditoria, consultoria tributária, contabilidade corporativa e treinamentos gerenciais.</p>
-
-                    <div class="row mt-4">
-                        <div class="col-sm-6">
-                            <div class="badge-info-custom">
-                                <h6 class="mb-1 text-dark fw-bold">CRC Ativo</h6>
-                                <small class="text-muted">SP-024067/O</small>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="badge-info-custom">
-                                <h6 class="mb-1 text-dark fw-bold">CNPJ Regular</h6>
-                                <small class="text-muted">07.845.955/0001-99</small>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="badge-info-custom">
-                                <h6 class="mb-1 text-dark fw-bold">Natureza Jurídica</h6>
-                                <small class="text-muted">Sociedade Simples Limitada</small>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="badge-info-custom">
-                                <h6 class="mb-1 text-dark fw-bold">Sede Própria</h6>
-                                <small class="text-muted">Ribeirão Preto / SP</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="bg-light p-4 rounded shadow-sm border">
-                        <h4 class="text-primary mb-3"><i class="bi bi-award-fill text-warning me-2"></i>Nossa Identidade</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
-                                <div>
-                                    <strong>Compromisso Ético & Técnico:</strong> Rigor absoluto na aplicação das normas contábeis brasileiras e internacionais.
-                                </div>
-                            </li>
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
-                                <div>
-                                    <strong>Visão Estratégica de Negócios:</strong> Suporte consultivo focado na tomada de decisão dos gestores.
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-start">
-                                <i class="bi bi-check-circle-fill text-success me-3 fs-5"></i>
-                                <div>
-                                    <strong>Tradição & Inovação:</strong> Duas décadas de estabilidade associadas às melhores soluções contábeis e fiscais.
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <!-- Diferenciais rápidos -->
+  <div class="container" style="margin-top:-50px; position:relative; z-index:2;">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="bg-white p-4 rounded-4 shadow d-flex align-items-center gap-3">
+          <i class="bi bi-shield-check fs-1 text-success"></i>
+          <div><h6 class="fw-bold mb-0">Segurança</h6><small>Registro CRC SP-024067/O</small></div>
         </div>
-    </section>
-
-    <!-- SERVIÇOS / ATIVIDADES (CNAES) -->
-    <section id="servicos" class="py-5 bg-light">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Atividades e Soluções</h2>
-                <p class="text-muted">Serviços corporativos de alta performance técnica e governança fiscal</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Principal -->
-                <div class="col-md-4">
-                    <div class="card card-service p-4">
-                        <div class="card-body text-center">
-                            <div class="service-icon mb-3">
-                                <i class="bi bi-journal-check"></i>
-                            </div>
-                            <span class="badge bg-primary mb-2">Atividade Principal</span>
-                            <h5 class="card-title fw-bold">Atividades de Contabilidade</h5>
-                            <p class="card-text text-muted small mt-2">CNAE: 69.20-6-01</p>
-                            <p class="card-text text-muted">Gestão contábil completa, escrituração fiscal, demonstrações financeiras (DRE, Balanço Patrimonial) e obrigações acessórias corporativas com total precisão.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Secundária 1 -->
-                <div class="col-md-4">
-                    <div class="card card-service p-4">
-                        <div class="card-body text-center">
-                            <div class="service-icon mb-3">
-                                <i class="bi bi-search-heart"></i>
-                            </div>
-                            <span class="badge bg-secondary mb-2">Atividade Secundária</span>
-                            <h5 class="card-title fw-bold">Auditoria e Consultoria Tributária</h5>
-                            <p class="card-text text-muted small mt-2">CNAE: 69.20-6-02</p>
-                            <p class="card-text text-muted">Revisão de procedimentos fiscais, auditoria contábil independente, planejamento tributário estratégico e mitigação de riscos operacionais.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Secundária 2 -->
-                <div class="col-md-4">
-                    <div class="card card-service p-4">
-                        <div class="card-body text-center">
-                            <div class="service-icon mb-3">
-                                <i class="bi bi-person-workspace"></i>
-                            </div>
-                            <span class="badge bg-secondary mb-2">Atividade Secundária</span>
-                            <h5 class="card-title fw-bold">Treinamento Gerencial</h5>
-                            <p class="card-text text-muted small mt-2">CNAE: 85.99-6-04</p>
-                            <p class="card-text text-muted">Capacitação profissional, programas de treinamento corporativo e desenvolvimento gerencial customizados para equipes financeiras e de controladoria.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white p-4 rounded-4 shadow d-flex align-items-center gap-3">
+          <i class="bi bi-award fs-1 text-primary"></i>
+          <div><h6 class="fw-bold mb-0">Experiência</h6><small>20 anos no mercado</small></div>
         </div>
-    </section>
-
-    <!-- QUADRO DE SÓCIOS -->
-    <section id="socios" class="py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Corpo Diretivo e Sócios</h2>
-                <p class="text-muted">Profissionais altamente qualificados liderando nossas operações</p>
-            </div>
-
-            <!-- Destaque Sócios-Administradores -->
-            <div class="row g-3 justify-content-center mb-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="p-3 border rounded text-center bg-light">
-                        <i class="bi bi-person-badge text-primary fs-3"></i>
-                        <h6 class="fw-bold mt-2 mb-1">Helio Mazzi Junior</h6>
-                        <small class="text-muted">Sócio-Administrador</small>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="p-3 border rounded text-center bg-light">
-                        <i class="bi bi-person-badge text-primary fs-3"></i>
-                        <h6 class="fw-bold mt-2 mb-1">Hildebrando Camargo</h6>
-                        <small class="text-muted">Sócio-Administrador</small>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="p-3 border rounded text-center bg-light">
-                        <i class="bi bi-person-badge text-primary fs-3"></i>
-                        <h6 class="fw-bold mt-2 mb-1">Marco Antonio O. Palos</h6>
-                        <small class="text-muted">Sócio-Administrador</small>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="p-3 border rounded text-center bg-light">
-                        <i class="bi bi-person-badge text-primary fs-3"></i>
-                        <h6 class="fw-bold mt-2 mb-1">Ricardo Aurelio Rissi</h6>
-                        <small class="text-muted">Sócio-Administrador</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Outros Sócios -->
-            <div class="accordion" id="accordionSocios">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSocios">
-                            Ver Demais Integrantes do Quadro de Sócios
-                        </button>
-                    </h2>
-                    <div id="collapseSocios" class="accordion-collapse collapse" data-bs-parent="#accordionSocios">
-                        <div class="accordion-body">
-                            <div class="row g-2 text-muted small">
-                                <div class="col-md-4">• Alexandre Tadeu de Almeida (Sócio)</div>
-                                <div class="col-md-4">• Andre Zerbetto Chinarello (Sócio)</div>
-                                <div class="col-md-4">• Bruno Schiavoni Vieira (Sócio)</div>
-                                <div class="col-md-4">• Carina Kelli dos Reis D Avila (Sócio)</div>
-                                <div class="col-md-4">• Edson Roberto Lopes Filho (Sócio)</div>
-                                <div class="col-md-4">• Juliana Inouye Cavalieri (Sócio)</div>
-                                <div class="col-md-4">• Lourenco Franchini Vinhola (Sócio)</div>
-                                <div class="col-md-4">• Marina Perossi Martins Lopes (Sócio)</div>
-                                <div class="col-md-4">• Marina Rios Molina (Sócio)</div>
-                                <div class="col-md-4">• Octavio Bution Neto (Sócio)</div>
-                                <div class="col-md-4">• Rubens Hamilton B. de Lacerda (Sócio)</div>
-                                <div class="col-md-4">• Vanessa Aparecida Matsuhashi (Sócio)</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white p-4 rounded-4 shadow d-flex align-items-center gap-3">
+          <i class="bi bi-people fs-1 text-warning"></i>
+          <div><h6 class="fw-bold mb-0">Equipe Especializada</h6><small>16 sócios</small></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <!-- CONTATO E LOCALIZAÇÃO -->
-    <section id="contato" class="py-5 bg-light">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Fale Conosco</h2>
-                <p class="text-muted">Estamos à disposição para atender a sua empresa com excelência</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Caixa de Informações -->
-                <div class="col-lg-6">
-                    <div class="contact-box h-100">
-                        <h4 class="mb-4 border-bottom pb-2">Canais de Atendimento</h4>
-                        
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-geo-alt-fill contact-icon"></i>
-                            <div>
-                                <strong>Endereço Sede:</strong><br>
-                                Rua Milton José Robusti, 75 - Andar 15, Conj. 1509<br>
-                                Bairro Jardim Botânico - CEP: 14021-613<br>
-                                Ribeirão Preto / SP
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-telephone-fill contact-icon"></i>
-                            <div>
-                                <strong>Telefones Operacionais:</strong><br>
-                                <a href="tel:1630197900" class="text-white text-decoration-none">(16) 3019-7900</a> | 
-                                <a href="tel:1630197901" class="text-white text-decoration-none">(16) 3019-7901</a>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-whatsapp contact-icon text-success"></i>
-                            <div>
-                                <strong>WhatsApp Comercial:</strong><br>
-                                <a href="https://wa.me/5516991861406" target="_blank" class="text-white text-decoration-none">(16) 99186-1406</a>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-envelope-fill contact-icon"></i>
-                            <div>
-                                <strong>E-mail Institucional:</strong><br>
-                                <a href="mailto:thatiane@tmaenergiasolar.com" class="text-white text-decoration-none">thatiane@tmaenergiasolar.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulário de Mensagem Direta -->
-                <div class="col-lg-6">
-                    <div class="bg-white p-4 rounded shadow-sm border h-100">
-                        <h4 class="text-primary mb-4">Envie uma Mensagem</h4>
-                        <form>
-                            <div class="mb-3">
-                                <label for="nome" class="form-label font-semibold">Nome Completo / Empresa</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Seu nome ou razão social" required>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="email" class="form-label">E-mail</label>
-                                    <input type="email" class="form-control" id="email" placeholder="seuemail@dominio.com" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="telefone" class="form-label">Telefone / WhatsApp</label>
-                                    <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="mensagem" class="form-label">Assunto / Mensagem</label>
-                                <textarea class="form-control" id="mensagem" rows="4" placeholder="Como podemos ajudar sua empresa?" required></textarea>
-                            </div>
-                            <button type="button" onclick="alert('Obrigado! Sua mensagem foi simulada com sucesso.')" class="btn btn-custom w-100">
-                                <i class="bi bi-send-fill me-2"></i>Enviar Solicitação
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Google Maps Embed Simulado -->
-            <div class="row mt-4">
-                <div class="col-12">
-                    <div class="ratio ratio-21x9 rounded shadow-sm overflow-hidden border">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.863118931165!2d-47.8118047!3d-21.2015822!2m3!1f0!0f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9bee6b75c0001%3A0x6b71f28b49e8eb3c!2sR.%20Milton%20Jos%C3%A9%20Robusti%2C%2075%20-%20Jardim%20Botanico%2C%20Ribeir%C3%A3o%20Preto%20-%20SP%2C%2014021-613!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-
+  <!-- Sobre -->
+  <section id="sobre">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="[images.unsplash.com](https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900)" class="img-fluid rounded-4 shadow" alt="Equipe Moore Prisma">
         </div>
-    </section>
+        <div class="col-lg-6">
+          <p class="subtitulo">Quem somos</p>
+          <h2 class="fw-bold mb-4" style="color:var(--primaria)">Moore Prisma Auditoria e Consultoria Contábil</h2>
+          <p>Fundada em <strong>30 de janeiro de 2006</strong> em <strong>Ribeirão Preto - SP</strong>, a Moore Prisma é uma organização contábil que trabalha com <strong>contabilidade, auditoria e consultoria contábil e tributária</strong>, além de oferecer <strong>treinamentos em desenvolvimento profissional e gerencial</strong>.</p>
+          <p>Nosso compromisso é dar informação contábil confiável e orientação estratégica para que nossos clientes decidam com segurança, cumpram suas obrigações e cresçam de forma sustentável.</p>
+          <div class="row mt-4 g-3">
+            <div class="col-sm-4 text-center"><i class="bi bi-bullseye fs-2 text-primary"></i><h6 class="fw-bold mt-2">Missão</h6><small>Gerar valor com excelência técnica e ética.</small></div>
+            <div class="col-sm-4 text-center"><i class="bi bi-eye fs-2 text-success"></i><h6 class="fw-bold mt-2">Visão</h6><small>Ser referência contábil no interior paulista.</small></div>
+            <div class="col-sm-4 text-center"><i class="bi bi-gem fs-2 text-warning"></i><h6 class="fw-bold mt-2">Valores</h6><small>Transparência, sigilo e comprometimento.</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <text-center class="d-block py-4">
-        <footer>
-            <div class="container text-center">
-                <p class="mb-1"><strong>Moore Prisma Auditoria e Consultoria Contábil S/S LTDA</strong></p>
-                <p class="mb-1">CNPJ: 07.845.955/0001-99 • Registro CRC: SP-024067/O</p>
-                <small class="text-muted">© 2006 - Todos os direitos reservados. Ribeirão Preto/SP.</small>
+  <!-- Serviços -->
+  <section id="servicos" class="bg-claro">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="subtitulo">O que fazemos</p>
+        <h2 class="titulo-secao">Nossos Serviços</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-servico">
+            <div class="icone"><i class="bi bi-calculator"></i></div>
+            <h5 class="fw-bold">Contabilidade Empresarial</h5>
+            <p>Escrituração contábil, balanços, demonstrações financeiras e obrigações acessórias em dia.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-servico">
+            <div class="icone"><i class="bi bi-search"></i></div>
+            <h5 class="fw-bold">Auditoria Contábil</h5>
+            <p>Análise independente das demonstrações financeiras, com mais transparência e credibilidade perante o mercado.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-servico">
+            <div class="icone"><i class="bi bi-percent"></i></div>
+            <h5 class="fw-bold">Consultoria Tributária</h5>
+            <p>Planejamento tributário, revisão fiscal e recuperação de créditos para reduzir a carga de impostos dentro da lei.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-servico">
+            <div class="icone"><i class="bi bi-briefcase"></i></div>
+            <h5 class="fw-bold">Consultoria Contábil</h5>
+            <p>Apoio estratégico na gestão financeira, reestruturações e tomada de decisão.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-servico">
+            <div class="icone"><i class="bi bi-mortarboard"></i></div>
+            <h5 class="fw-bold">Treinamentos</h5>
+            <p>Desenvolvimento profissional e gerencial para capacitar equipes e líderes.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-servico">
+            <div class="icone"><i class="bi bi-file-earmark-check"></i></div>
+            <h5 class="fw-bold">Compliance e Obrigações</h5>
+            <p>Conformidade fiscal, SPED, ECD, ECF e demais obrigações junto aos órgãos públicos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Números -->
+  <div class="numeros text-center">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3"><i class="bi bi-calendar-check fs-1"></i><h3>20+</h3><p>Anos de experiência</p></div>
+        <div class="col-6 col-md-3"><i class="bi bi-person-badge fs-1"></i><h3>16</h3><p>Sócios especialistas</p></div>
+        <div class="col-6 col-md-3"><i class="bi bi-diagram-3 fs-1"></i><h3>3</h3><p>Áreas de atuação</p></div>
+        <div class="col-6 col-md-3"><i class="bi bi-patch-check fs-1"></i><h3>100%</h3><p>Compromisso ético</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sócios -->
+  <section id="equipe" class="bg-claro">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="subtitulo">Nossa liderança</p>
+        <h2 class="titulo-secao">Quadro de Sócios e Administradores</h2>
+      </div>
+      <div class="row g-3">
+        <!-- Sócios-Administradores -->
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Helio Mazzi Junior</h6><span class="badge badge-adm">Sócio-Administrador</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Hildebrando Camargo</h6><span class="badge badge-adm">Sócio-Administrador</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Marco Antonio Olivio Palos</h6><span class="badge badge-adm">Sócio-Administrador</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Ricardo Aurelio Rissi</h6><span class="badge badge-adm">Sócio-Administrador</span></div></div>
+        <!-- Sócios -->
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Alexandre Tadeu de Almeida</h6><span class="badge bg-primary">Sócio</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Andre Zerbetto Chinarello</h6><span class="badge bg-primary">Sócio</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Bruno Schiavoni Vieira</h6><span class="badge bg-primary">Sócio</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Carina Kelli dos Reis D Avila</h6><span class="badge bg-primary">Sócia</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Edson Roberto Lopes Filho</h6><span class="badge bg-primary">Sócio</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Juliana Inouye Cavalieri</h6><span class="badge bg-primary">Sócia</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Lourenco Franchini Vinhola</h6><span class="badge bg-primary">Sócio</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Marina Perossi Martins Lopes</h6><span class="badge bg-primary">Sócia</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Marina Rios Molina</h6><span class="badge bg-primary">Sócia</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Octavio Bution Neto</h6><span class="badge bg-primary">Sócio</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Rubens Hamilton Berto de Lacerda</h6><span class="badge bg-primary">Sócio</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="socio"><i class="bi bi-person-circle"></i><h6>Vanessa Aparecida Matsuhashi</h6><span class="badge bg-primary">Sócia</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frase -->
+  <div class="frase text-center">
+    <div class="container">
+      <i class="bi bi-quote fs-1"></i>
+      <blockquote class="mb-2">"Números bem organizados contam a história do seu negócio e mostram o caminho do seu futuro."</blockquote>
+      <p class="fw-semibold mb-0">— Moore Prisma</p>
+    </div>
+  </div>
+
+  <!-- Dados da empresa -->
+  <section id="empresa">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="subtitulo">Transparência</p>
+        <h2 class="titulo-secao">Informações de Registro</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="contato-box">
+            <h5 class="fw-bold mb-3"><i class="bi bi-building me-2 text-primary"></i>Dados Cadastrais</h5>
+            <table class="table table-striped tabela-info mb-0">
+              <tr><td>CNPJ</td><td>07.845.955/0001-99</td></tr>
+              <tr><td>Razão Social</td><td>Moore Prisma Auditoria e Consultoria Contabil S/S LTDA</td></tr>
+              <tr><td>Nome Fantasia</td><td>Moore</td></tr>
+              <tr><td>CRC</td><td>SP-024067/O</td></tr>
+              <tr><td>Data de Abertura</td><td>30/01/2006</td></tr>
+              <tr><td>Natureza Jurídica</td><td>Sociedade Simples Limitada</td></tr>
+              <tr><td>Tipo</td><td>Matriz</td></tr>
+              <tr><td>Situação</td><td><span class="badge bg-success">Ativa</span></td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contato-box">
+            <h5 class="fw-bold mb-3"><i class="bi bi-list-check me-2 text-primary"></i>Atividades (CNAE)</h5>
+            <div class="contato-item">
+              <i class="bi bi-star-fill"></i>
+              <div><strong>Principal</strong><br>69.20-6-01 - Atividades de contabilidade</div>
             </div>
-        </footer>
-    </text-center>
+            <div class="contato-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <div><strong>Secundária</strong><br>69.20-6-02 - Atividades de consultoria e auditoria contábil e tributária</div>
+            </div>
+            <div class="contato-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <div><strong>Secundária</strong><br>85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS + Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Contato -->
+  <section id="contato" class="bg-claro">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="subtitulo">Atendimento</p>
+        <h2 class="titulo-secao">Entre em Contato</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="contato-box">
+            <div class="contato-item"><i class="bi bi-geo-alt-fill"></i>
+              <div><strong>Endereço</strong><br>Rua Milton José Robusti, 75 - Andar 15, Conj. 1509<br>Jardim Botânico - Ribeirão Preto/SP<br>CEP 14021-613</div></div>
+            <div class="contato-item"><i class="bi bi-telephone-fill"></i>
+              <div><strong>Telefones</strong><br>
+                <a href="tel:1630197900">(16) 3019-7900</a><br>
+                <a href="tel:1630197901">(16) 3019-7901</a></div></div>
+            <div class="contato-item"><i class="bi bi-whatsapp"></i>
+              <div><strong>WhatsApp</strong><br><a href="[wa.me](https://wa.me/5516991861406)" target="_blank">(16) 99186-1406</a></div></div>
+            <div class="contato-item"><i class="bi bi-envelope-fill"></i>
+              <div><strong>E-mail</strong><br><a href="mailto:thatiane@tmaenergiasolar.com">thatiane@tmaenergiasolar.com</a></div></div>
+            <div class="contato-item"><i class="bi bi-clock-fill"></i>
+              <div><strong>Horário</strong><br>Segunda a sexta, das 8h às 18h</div></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="contato-box">
+            <h5 class="fw-bold mb-3">Envie sua mensagem</h5>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6"><input type="text" class="form-control" placeholder="Seu nome" required></div>
+                <div class="col-md-6"><input type="email" class="form-control" placeholder="Seu e-mail" required></div>
+                <div class="col-md-6"><input type="tel" class="form-control" placeholder="Telefone"></div>
+                <div class="col-md-6">
+                  <select class="form-select">
+                    <option selected>Assunto</option>
+                    <option>Contabilidade</option>
+                    <option>Auditoria</option>
+                    <option>Consultoria Tributária</option>
+                    <option>Treinamentos</option>
+                  </select>
+                </div>
+                <div class="col-12"><textarea class="form-control" rows="4" placeholder="Mensagem"></textarea></div>
+                <div class="col-12"><button type="submit" class="btn btn-destaque w-100"><i class="bi bi-send me-2"></i>Enviar Mensagem</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-12">
+          <iframe class="w-100 rounded-4 shadow" height="380" style="border:0" loading="lazy"
+            src="[google.com](https://www.google.com/maps?q=Rua+Milton+Jose+Robusti,+75,+Ribeirao+Preto,+SP,+14021-613&output=embed)"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5><i class="bi bi-bar-chart-line-fill me-2"></i>Moore Prisma</h5>
+          <p>Auditoria e Consultoria Contábil com ética, técnica e compromisso desde 2006.</p>
+          <div class="redes">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="[wa.me](https://wa.me/5516991861406)"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#equipe">Sócios</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Serviços</h5>
+          <ul class="list-unstyled">
+            <li>Contabilidade</li>
+            <li>Auditoria</li>
+            <li>Consultoria Tributária</li>
+            <li>Treinamentos</li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contato</h5>
+          <p class="mb-1"><i class="bi bi-telephone me-2"></i>(16) 3019-7900</p>
+          <p class="mb-1"><i class="bi bi-whatsapp me-2"></i>(16) 99186-1406</p>
+          <p><i class="bi bi-geo-alt me-2"></i>Ribeirão Preto - SP</p>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-0">
+        © 2026 Moore Prisma Auditoria e Consultoria Contabil S/S LTDA · CNPJ 07.845.955/0001-99 · CRC SP-024067/O
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão WhatsApp -->
+  <a href="[wa.me](https://wa.me/5516991861406?text=Olá!%20Gostaria%20de%20mais%20informações)" class="whatsapp" target="_blank" title="Fale pelo WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js)"></script>
 </body>
 </html>
